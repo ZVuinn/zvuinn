@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>乙女男主图鉴</title>
+<style>
+:root{
+ --site-primary:#D9A9B7;--site-on-primary:#38242B;
+ --site-secondary:#F2E7E8;--site-on-secondary:#49383D;
+ --site-background:#FBF8F7;--site-on-background:#392F32;
+ --site-font-body:ui-sans-serif,system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+ --site-font-heading:ui-serif,"Songti SC","Noto Serif CJK SC",serif;
+ --site-heading-scale:1;--site-spacing-scale:1;--site-radius-scale:1;--site-decoration-opacity:1;
+ --surface:#fff;--muted:#897C80;--line:#EEE4E5;--accent:#A86F80;--soft:#F8EFF1;
+}
+*{box-sizing:border-box}body{margin:0;background:var(--site-background);color:var(--site-on-background);font-family:var(--site-font-body)}
+#app{min-height:100vh;background-color:var(--site-background);color:var(--site-on-background)}
+.top{background:var(--site-secondary);border-bottom:1px solid var(--line)}.topin{max-width:1180px;margin:auto;padding:26px 28px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:13px}.mark{width:43px;height:43px;border-radius:50%;background:var(--site-primary);display:grid;place-items:center;color:var(--site-on-primary);font-size:21px}.eyebrow{font-size:11px;letter-spacing:.22em;color:var(--accent)}h1{font:calc(29px * var(--site-heading-scale))/1.2 var(--site-font-heading);margin:3px 0 0;letter-spacing:.05em}.topnote{font-size:12px;color:var(--muted);text-align:right;line-height:1.8}
+main{max-width:1180px;margin:auto;padding:28px;display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:calc(18px * var(--site-radius-scale));padding:22px;box-shadow:0 7px 24px #62434b0a}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}.sectionhead h2{font:calc(19px * var(--site-heading-scale)) var(--site-font-heading);margin:0}.sub{font-size:12px;color:var(--muted)}
+.searchrow{display:flex;gap:9px}.searchbox{flex:1;position:relative}.searchbox span{position:absolute;left:14px;top:12px;color:#A18E94}.searchbox input{padding-left:39px;width:100%}input,textarea,select{font:inherit;color:var(--site-on-background);background:#FFFEFE;border:1px solid var(--line);border-radius:11px;padding:11px 12px;outline:none;width:100%;min-width:0}input:focus,textarea:focus,select:focus{border-color:var(--site-primary);box-shadow:0 0 0 3px #D9A9B729}button{font:inherit;border:0;border-radius:11px;padding:11px 16px;cursor:pointer;transition:.15s}button:hover{transform:translateY(-1px)}.primary{background:var(--site-primary);color:var(--site-on-primary);font-weight:650}.secondary{background:var(--soft);color:var(--accent)}.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}.danger{color:#A34E5D;background:#FBF0F1}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px}.chip{font-size:12px;padding:7px 12px;border-radius:99px;background:#FAF5F5;color:#806C73;border:1px solid var(--line);cursor:pointer}.chip.active{background:var(--site-secondary);border-color:var(--site-primary);color:#684653}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.char{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#FFFEFE;cursor:pointer;transition:.18s}.char:hover{border-color:var(--site-primary);transform:translateY(-2px)}.portrait{height:154px;background:linear-gradient(145deg,#F4E6E9,#E9D6DC);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.portrait img{width:100%;height:100%;object-fit:cover}.placeholder{font:36px var(--site-font-heading);color:#9A7380;letter-spacing:.08em}.tag{position:absolute;left:9px;top:9px;background:#ffffffdc;color:#775762;padding:4px 8px;border-radius:99px;font-size:10px}.charinfo{padding:11px 12px}.charname{font-weight:650;font-size:14px}.game{font-size:11px;color:var(--muted);margin-top:4px}.addhint{font-size:11px;color:var(--accent);margin-top:9px}
+.right{display:flex;flex-direction:column;gap:16px}.upload{border:1px dashed #D8B7C0;background:#FCF7F8;border-radius:14px;padding:15px;text-align:center}.upload strong{display:block;font-size:13px;margin:5px}.upload small{color:var(--muted);font-size:11px;line-height:1.6}.upload input{display:none}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#84747A}.field textarea{resize:vertical;min-height:70px}.photo-preview{height:150px;border-radius:12px;background:#F5EAED;display:grid;place-items:center;overflow:hidden;margin-bottom:12px}.photo-preview img{width:100%;height:100%;object-fit:cover}.photo-preview span{font:25px var(--site-font-heading);color:#A17B86}.actions{display:flex;gap:8px;margin-top:13px}.actions button{flex:1}.empty{padding:35px 10px;text-align:center;color:var(--muted);font-size:13px;grid-column:1/-1}.list{display:flex;flex-direction:column;gap:9px}.saved{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid var(--line);border-radius:12px}.thumb{width:43px;height:49px;border-radius:8px;background:var(--soft);display:grid;place-items:center;overflow:hidden;flex:none;color:#9A7380}.thumb img{width:100%;height:100%;object-fit:cover}.savedmeta{min-width:0;flex:1}.savedmeta b{font-size:12px;display:block}.savedmeta small{font-size:10px;color:var(--muted)}.saved button{padding:6px 8px;font-size:11px}.foot{max-width:1180px;margin:0 auto;padding:0 28px 26px;color:var(--muted);font-size:11px;line-height:1.8}.notice{background:#FFF8F0;border:1px solid #F0E0C9;color:#826A4E;border-radius:11px;padding:10px 12px;font-size:11px;line-height:1.7;margin-top:13px}
+@media(max-width:850px){main{grid-template-columns:1fr;padding:16px}.topin{padding:20px 16px}.topnote{display:none}.results{grid-template-columns:repeat(2,minmax(0,1fr))}.right{display:grid;grid-template-columns:1fr 1fr}.foot{padding:0 16px 22px}}
+@media(max-width:520px){.right{display:flex}.panel{padding:16px}.results{gap:9px}.portrait{height:132px}.sectionhead{align-items:flex-start}.formgrid{gap:8px}}
+</style></head>
+<body><div id="app">
+<header class="top"><div class="topin"><div class="brand"><div class="mark">✿</div><div><div class="eyebrow">OTOME CHARACTER ARCHIVE</div><h1>乙女男主图鉴</h1></div></div><div class="topnote">把心动角色，收藏成册。<br>搜索 · 整理 · 收藏 · 导出</div></div></header>
+<main><section class="panel">
+ <div class="sectionhead"><div><h2>寻找你的本命</h2><div class="sub" style="margin-top:5px">搜索角色或游戏，点击卡片即可载入编辑表格</div></div><span class="sub" id="count">示例资料</span></div>
+ <div class="searchrow"><div class="searchbox"><span>⌕</span><input id="search" placeholder="试试搜索：萧逸 / 光与夜之恋 / 角色名"></div><button class="primary" id="searchBtn">搜索</button></div>
+ <div class="filters"><button class="chip active" data-filter="全部">全部</button><button class="chip" data-filter="薄樱鬼">薄樱鬼</button><button class="chip" data-filter="Collar×Malice">Collar×Malice</button><button class="chip" data-filter="Code:Realize">Code:Realize</button><button class="chip" data-filter="AMNESIA">AMNESIA</button><button class="chip" data-filter="恋与制作人">恋与制作人</button><button class="chip" data-filter="光与夜之恋">光与夜之恋</button><button class="chip" data-filter="未定事件簿">未定事件簿</button><button class="chip" data-filter="虔诚之花的晚钟">虔诚之花的晚钟</button><button class="chip" data-filter="终远的威尔修">终远的威尔修</button><button class="chip" data-filter="奥林匹亚的晚宴">奥林匹亚的晚宴</button><button class="chip" data-filter="Cupid Parasite">Cupid Parasite</button><button class="chip" data-filter="Charade Maniacs">Charade Maniacs</button><button class="chip" data-filter="天狱乱斗">天狱乱斗</button><button class="chip" data-filter="9 R.I.P.">9 R.I.P.</button><button class="chip" data-filter="Radiant Tale">Radiant Tale</button><button class="chip" data-filter="Variable Barricade">Variable Barricade</button><button class="chip" data-filter="Jack Jeanne">Jack Jeanne</button><button class="chip" data-filter="NORN9">NORN9</button><button class="chip" data-filter="DIABOLIK LOVERS">DIABOLIK LOVERS</button><button class="chip" data-filter="十三支演义">十三支演义</button><button class="chip" data-filter="Piofiore">Piofiore</button><button class="chip" data-filter="BUSTAFELLOWS">BUSTAFELLOWS</button><button class="chip" data-filter="even if TEMPEST">even if TEMPEST</button><button class="chip" data-filter="Birushana">Birushana</button><button class="chip" data-filter="Nightshade">Nightshade</button><button class="chip" data-filter="7'scarlet">7'scarlet</button><button class="chip" data-filter="Steam Prison">Steam Prison</button><button class="chip" data-filter="Cafe Enchante">Cafe Enchante</button><button class="chip" data-filter="Dairoku">Dairoku</button><button class="chip" data-filter="Lover Pretend">Lover Pretend</button><button class="chip" data-filter="Winter's Wish">Winter's Wish</button><button class="chip" data-filter="Mistonia's Hope">Mistonia's Hope</button><button class="chip" data-filter="收藏">我的收藏</button></div>
+ <div class="results" id="results"></div>
+ <div class="notice">搜图升级：选中角色后可点击「打开图片搜索」，按角色名和游戏名查找图片，再保存到设备并上传到资料卡。此预览不能直接跨站抓取图片或自动读取搜索结果；请使用有权保存和使用的图片。</div>
+ </section>
+ <aside class="right">
+ <section class="panel"><div class="sectionhead"><div><h2>角色资料卡</h2><div class="sub" style="margin-top:4px">选择搜索结果或新建角色</div></div><button class="ghost" id="newBtn">＋ 新建</button></div>
+ <div class="photo-preview" id="photoPreview"><span>PHOTO / 照片预览</span></div>
+ <div class="upload"><div style="font-size:20px">＋</div><strong>上传男主照片</strong><small>支持 JPG、PNG、WEBP<br>图片仅保存在当前浏览器</small><label for="photoFile" class="secondary" style="display:inline-block;margin-top:9px;padding:8px 13px;border-radius:9px;font-size:12px;cursor:pointer">选择图片</label><input type="file" id="photoFile" accept="image/*"><button class="ghost" id="imageSearchBtn" style="margin-top:9px;width:100%">⌕ 打开图片搜索</button></div>
+ <div class="formgrid" style="margin-top:14px">
+ <div class="field full"><label>游戏名称</label><input id="game" placeholder="例如：光与夜之恋"></div>
+ <div class="field"><label>男主姓名</label><input id="name" placeholder="角色姓名"></div><div class="field"><label>CV 声优</label><input id="cv" placeholder="声优姓名"></div>
+ <div class="field"><label>生日</label><input id="birthday" placeholder="例如：6月24日"></div><div class="field"><label>身高</label><input id="height" placeholder="例如：185cm"></div>
+ <div class="field"><label>个人评分</label><select id="rating"><option value="">暂不评分</option><option>★★★★★</option><option>★★★★☆</option><option>★★★☆☆</option><option>★★☆☆☆</option><option>★☆☆☆☆</option></select></div>
+ <div class="field full"><label>角色简介</label><textarea id="bio" placeholder="写下你喜欢他的理由……"></textarea></div></div>
+ <div class="actions"><button class="primary" id="saveBtn">保存到图鉴</button><button class="ghost" id="favBtn">♡ 收藏</button></div>
+ <div class="sub" id="formMsg" style="margin-top:9px;min-height:16px"></div>
+ </section>
+ <section class="panel"><div class="sectionhead"><div><h2>我的收藏</h2><div class="sub" style="margin-top:4px">已收录 <b id="savedCount">0</b> 位男主</div></div><button class="secondary" id="exportBtn">导出 CSV</button></div><div class="list" id="savedList"><div class="empty">还没有收藏角色<br>从左侧搜索并添加吧 ♡</div></div></section>
+ </aside>
+ </main><footer class="foot">本工具为个人整理用途。角色图片、名称及相关资料的权利归原权利人所有；上传和使用图片前请确认你拥有相应使用权限。资料保存在本机浏览器，清理浏览器数据可能导致记录丢失。</footer>
+</div>
+<script>
+const seed=[
+ {id:'s1',game:'薄樱鬼',name:'土方岁三',cv:'',birthday:'',height:'',rating:'',bio:'示例角色条目。可补充声优、生日、身高与个人简介。',photo:'',source:'示例'},
+ {id:'s2',game:'薄樱鬼',name:'斋藤一',cv:'',birthday:'',height:'',rating:'',bio:'示例角色条目。可补充声优、生日、身高与个人简介。',photo:'',source:'示例'},
+ {id:'s3',game:'Collar×Malice',name:'柳爱时',cv:'森田成一',birthday:'',height:'',rating:'',bio:'前警视厅搜查一课刑警，冷静而富有正义感。',photo:'',source:'资料库'},
+ {id:'s4',game:'Collar×Malice',name:'白石景之',cv:'木村良平',birthday:'',height:'',rating:'',bio:'科搜研职员，擅长心理侧写。',photo:'',source:'资料库'},
+ {id:'s5',game:'Collar×Malice',name:'冈崎契',cv:'梶裕贵',birthday:'',height:'',rating:'',bio:'负责警护任务的SP，性格随性天然。',photo:'',source:'资料库'},
+ {id:'s33',game:'Collar×Malice',name:'榎本峰雄',cv:'斉藤壮馬',birthday:'',height:'',rating:'',bio:'前机动搜查队成员，热血直率。',photo:'',source:'资料库'},
+ {id:'s34',game:'Collar×Malice',name:'笹塚尊',cv:'浪川大辅',birthday:'',height:'',rating:'',bio:'前网络犯罪对策课成员，头脑聪明、说话犀利。',photo:'',source:'资料库'},
+ {id:'s6',game:'薄樱鬼',name:'冲田总司',cv:'森久保祥太郎',birthday:'',height:'',rating:'',bio:'新选组一番队组长。',photo:'',source:'资料库'},
+ {id:'s7',game:'薄樱鬼',name:'藤堂平助',cv:'吉野裕行',birthday:'',height:'',rating:'',bio:'新选组八番队组长。',photo:'',source:'资料库'},
+ {id:'s8',game:'薄樱鬼',name:'原田左之助',cv:'游佐浩二',birthday:'',height:'',rating:'',bio:'新选组三番队组长。',photo:'',source:'资料库'},
+ {id:'s9',game:'薄樱鬼',name:'风间千景',cv:'津田健次郎',birthday:'',height:'',rating:'',bio:'鬼之一族的首领。',photo:'',source:'资料库'},
+ {id:'s10',game:'Code:Realize',name:'亚伯拉罕·范海辛',cv:'诹访部顺一',birthday:'',height:'',rating:'',bio:'吸血鬼猎人。',photo:'',source:'资料库'},
+ {id:'s11',game:'Code:Realize',name:'维克多·弗兰肯斯坦',cv:'柿原彻也',birthday:'',height:'',rating:'',bio:'天才科学家。',photo:'',source:'资料库'},
+ {id:'s12',game:'Code:Realize',name:'圣日耳曼',cv:'平川大辅',birthday:'',height:'',rating:'',bio:'神秘的贵族绅士。',photo:'',source:'资料库'},
+ {id:'s13',game:'Code:Realize',name:'因佩',cv:'森久保祥太郎',birthday:'',height:'',rating:'',bio:'擅长开锁的怪盗。',photo:'',source:'资料库'},
+ {id:'s14',game:'AMNESIA',name:'Shin',cv:'柿原彻也',birthday:'',height:'',rating:'',bio:'冷静、直率的青梅竹马。',photo:'',source:'资料库'},
+ {id:'s15',game:'AMNESIA',name:'Ikki',cv:'木村良平',birthday:'',height:'',rating:'',bio:'拥有众多仰慕者的大学生。',photo:'',source:'资料库'},
+ {id:'s16',game:'AMNESIA',name:'Kent',cv:'石田彰',birthday:'',height:'',rating:'',bio:'理性严谨的数学系研究生。',photo:'',source:'资料库'},
+ {id:'s17',game:'AMNESIA',name:'Toma',cv:'日野聪',birthday:'',height:'',rating:'',bio:'温柔可靠的年长青梅竹马。',photo:'',source:'资料库'},
+ {id:'s18',game:'AMNESIA',name:'Ukyo',cv:'宫田幸季',birthday:'',height:'',rating:'',bio:'身份神秘的摄影师。',photo:'',source:'资料库'},
+ {id:'s19',game:'光与夜之恋',name:'萧逸',cv:'阿杰',birthday:'',height:'',rating:'',bio:'赛车手，热烈自由。',photo:'',source:'资料库'},
+ {id:'s20',game:'光与夜之恋',name:'陆沉',cv:'刘照坤',birthday:'',height:'',rating:'',bio:'万甄集团总裁。',photo:'',source:'资料库'},
+ {id:'s21',game:'光与夜之恋',name:'齐司礼',cv:'赵路',birthday:'',height:'',rating:'',bio:'知名设计师。',photo:'',source:'资料库'},
+ {id:'s22',game:'光与夜之恋',name:'查理苏',cv:'吴磊',birthday:'',height:'',rating:'',bio:'外科医生。',photo:'',source:'资料库'},
+ {id:'s23',game:'光与夜之恋',name:'夏鸣星',cv:'孙晔',birthday:'',height:'',rating:'',bio:'音乐剧演员。',photo:'',source:'资料库'},
+ {id:'s24',game:'恋与制作人',name:'许墨',cv:'夏磊',birthday:'',height:'',rating:'',bio:'天才科学家。',photo:'',source:'资料库'},
+ {id:'s25',game:'恋与制作人',name:'李泽言',cv:'吴磊',birthday:'',height:'',rating:'',bio:'华锐总裁。',photo:'',source:'资料库'},
+ {id:'s26',game:'恋与制作人',name:'白起',cv:'边江',birthday:'',height:'',rating:'',bio:'特警。',photo:'',source:'资料库'},
+ {id:'s27',game:'恋与制作人',name:'周棋洛',cv:'阿杰',birthday:'',height:'',rating:'',bio:'人气偶像。',photo:'',source:'资料库'},
+ {id:'s28',game:'恋与制作人',name:'凌肖',cv:'赵路',birthday:'',height:'',rating:'',bio:'音乐人。',photo:'',source:'资料库'},
+ {id:'s29',game:'未定事件簿',name:'左然',cv:'赵路',birthday:'',height:'',rating:'',bio:'精英律师。',photo:'',source:'资料库'},
+ {id:'s30',game:'未定事件簿',name:'莫弈',cv:'姜广涛',birthday:'',height:'',rating:'',bio:'心理医生。',photo:'',source:'资料库'},
+ {id:'s31',game:'未定事件簿',name:'夏彦',cv:'金弦',birthday:'',height:'',rating:'',bio:'青梅竹马，私人侦探。',photo:'',source:'资料库'},
+ {id:'s32',game:'未定事件簿',name:'陆景和',cv:'杨天翔',birthday:'',height:'',rating:'',bio:'艺术家，家族企业继承人。',photo:'',source:'资料库'},
+ {id:'s35',game:'虔诚之花的晚钟',name:'但丁·法尔宗',cv:'石川界人',birthday:'',height:'',rating:'',bio:'Falzone 家族的年轻首领。',photo:'',source:'资料库'},
+ {id:'s36',game:'虔诚之花的晚钟',name:'吉尔伯特·雷德福',cv:'森久保祥太郎',birthday:'',height:'',rating:'',bio:'Visconti 家族首领。',photo:'',source:'资料库'},
+ {id:'s37',game:'虔诚之花的晚钟',name:'杨',cv:'冈本信彦',birthday:'',height:'',rating:'',bio:'神秘而危险的组织首领。',photo:'',source:'资料库'},
+ {id:'s38',game:'虔诚之花的晚钟',name:'尼古拉·弗兰切斯卡',cv:'木村良平',birthday:'',height:'',rating:'',bio:'Falzone 家族顾问。',photo:'',source:'资料库'},
+ {id:'s39',game:'终远的威尔修',name:'伊夫',cv:'齐藤壮马',birthday:'',height:'',rating:'',bio:'围绕死亡与命运展开故事的关键人物。',photo:'',source:'资料库'},
+ {id:'s40',game:'终远的威尔修',name:'希安',cv:'细谷佳正',birthday:'',height:'',rating:'',bio:'主要攻略角色之一。',photo:'',source:'资料库'},
+ {id:'s41',game:'终远的威尔修',name:'阿道夫',cv:'八代拓',birthday:'',height:'',rating:'',bio:'主要攻略角色之一。',photo:'',source:'资料库'},
+ {id:'s42',game:'终远的威尔修',name:'卢卡斯',cv:'平川大辅',birthday:'',height:'',rating:'',bio:'主要攻略角色之一。',photo:'',source:'资料库'},
+ {id:'s43',game:'奥林匹亚的晚宴',name:'朱砂',cv:'松冈祯丞',birthday:'',height:'',rating:'',bio:'白色一族的青年。',photo:'',source:'资料库'},
+ {id:'s44',game:'奥林匹亚的晚宴',name:'玄叶',cv:'杉田智和',birthday:'',height:'',rating:'',bio:'黑色一族的首领。',photo:'',source:'资料库'},
+ {id:'s45',game:'奥林匹亚的晚宴',name:'璃空',cv:'岛崎信长',birthday:'',height:'',rating:'',bio:'青色一族的青年。',photo:'',source:'资料库'},
+ {id:'s46',game:'奥林匹亚的晚宴',name:'时贯',cv:'上村祐翔',birthday:'',height:'',rating:'',bio:'黄色一族的青年。',photo:'',source:'资料库'},
+ {id:'s47',game:'奥林匹亚的晚宴',name:'缘',cv:'内田雄马',birthday:'',height:'',rating:'',bio:'赤色一族的青年。',photo:'',source:'资料库'},
+ {id:'s48',game:'Cupid Parasite',name:'吉尔·洛弗克拉夫特',cv:'木村良平',birthday:'',height:'',rating:'',bio:'恋爱咨询公司的同事。',photo:'',source:'资料库'},
+ {id:'s49',game:'Cupid Parasite',name:'谢尔比·斯内尔',cv:'KENN',birthday:'',height:'',rating:'',bio:'精英企业家。',photo:'',source:'资料库'},
+ {id:'s50',game:'Cupid Parasite',name:'劳尔·阿科尼特',cv:'八代拓',birthday:'',height:'',rating:'',bio:'热爱神话的演员。',photo:'',source:'资料库'},
+ {id:'s51',game:'Cupid Parasite',name:'艾伦·梅尔维尔',cv:'古川慎',birthday:'',height:'',rating:'',bio:'故事中的重要角色。',photo:'',source:'资料库'},
+ {id:'s52',game:'Cupid Parasite',name:'彼得·弗洛雷斯',cv:'天崎滉平',birthday:'',height:'',rating:'',bio:'故事中的重要角色。',photo:'',source:'资料库'},
+ {id:'s53',game:'Charade Maniacs',name:'明濑智人',cv:'齐藤壮马',birthday:'',height:'',rating:'',bio:'被卷入神秘世界的高中生。',photo:'',source:'资料库'},
+ {id:'s54',game:'Charade Maniacs',name:'万城トモセ',cv:'铃村健一',birthday:'',height:'',rating:'',bio:'主要角色之一。',photo:'',source:'资料库'},
+ {id:'s55',game:'Charade Maniacs',name:'茅ヶ裂マモル',cv:'浪川大辅',birthday:'',height:'',rating:'',bio:'主要角色之一。',photo:'',source:'资料库'},
+ {id:'s56',game:'9 R.I.P.',name:'红华',cv:'增田俊树',birthday:'',height:'',rating:'',bio:'灵异题材故事的攻略角色。',photo:'',source:'资料库'},
+ {id:'s57',game:'9 R.I.P.',name:'响',cv:'土岐隼一',birthday:'',height:'',rating:'',bio:'灵异题材故事的攻略角色。',photo:'',source:'资料库'},
+ {id:'s58',game:'9 R.I.P.',name:'幸麿',cv:'柿原彻也',birthday:'',height:'',rating:'',bio:'灵异题材故事的攻略角色。',photo:'',source:'资料库'},
+ {id:'s59',game:'9 R.I.P.',name:'星绊',cv:'柿原彻也',birthday:'',height:'',rating:'',bio:'灵异题材故事的攻略角色。',photo:'',source:'资料库'},
+ {id:'s60',game:'Radiant Tale',name:'帕斯查',cv:'榎木淳弥',birthday:'',height:'',rating:'',bio:'旅行剧团成员。',photo:'',source:'资料库'},
+ {id:'s61',game:'Radiant Tale',name:'伊格尼斯',cv:'梅原裕一郎',birthday:'',height:'',rating:'',bio:'旅行剧团成员。',photo:'',source:'资料库'},
+ {id:'s62',game:'Radiant Tale',name:'维斯',cv:'阿座上洋平',birthday:'',height:'',rating:'',bio:'旅行剧团成员。',photo:'',source:'资料库'},
+ {id:'s63',game:'Variable Barricade',name:'光森壱哉',cv:'鸟海浩辅',birthday:'',height:'',rating:'',bio:'候选未婚夫之一。',photo:'',source:'资料库'},
+ {id:'s64',game:'Variable Barricade',name:'石动大我',cv:'冈本信彦',birthday:'',height:'',rating:'',bio:'候选未婚夫之一。',photo:'',source:'资料库'},
+ {id:'s65',game:'Variable Barricade',name:'黛汐音',cv:'野岛健儿',birthday:'',height:'',rating:'',bio:'候选未婚夫之一。',photo:'',source:'资料库'},
+ {id:'s66',game:'Variable Barricade',name:'八神那由太',cv:'下野纮',birthday:'',height:'',rating:'',bio:'候选未婚夫之一。',photo:'',source:'资料库'},
+ {id:'s67',game:'Jack Jeanne',name:'高科更文',cv:'近藤孝行',birthday:'',height:'',rating:'',bio:'玉阪座的学生。',photo:'',source:'资料库'},
+ {id:'s68',game:'Jack Jeanne',name:'睦实介',cv:'笠间淳',birthday:'',height:'',rating:'',bio:'玉阪座的学生。',photo:'',source:'资料库'},
+ {id:'s69',game:'Jack Jeanne',name:'根地黑门',cv:'岸尾大辅',birthday:'',height:'',rating:'',bio:'玉阪座的学生。',photo:'',source:'资料库'},
+ {id:'s70',game:'NORN9',name:'结贺驱',cv:'梶裕贵',birthday:'',height:'',rating:'',bio:'飞船上的少年。',photo:'',source:'资料库'},
+ {id:'s71',game:'NORN9',name:'市之濑千里',cv:'下野纮',birthday:'',height:'',rating:'',bio:'飞船上的少年。',photo:'',source:'资料库'},
+ {id:'s72',game:'NORN9',name:'远矢正宗',cv:'佐藤拓也',birthday:'',height:'',rating:'',bio:'飞船上的青年。',photo:'',source:'资料库'},
+ {id:'s73',game:'DIABOLIK LOVERS',name:'逆卷绫人',cv:'绿川光',birthday:'',height:'',rating:'',bio:'逆卷家的三胞胎之一。',photo:'',source:'资料库'},
+ {id:'s74',game:'DIABOLIK LOVERS',name:'逆卷奏人',cv:'梶裕贵',birthday:'',height:'',rating:'',bio:'逆卷家的三胞胎之一。',photo:'',source:'资料库'},
+ {id:'s75',game:'DIABOLIK LOVERS',name:'逆卷礼人',cv:'平川大辅',birthday:'',height:'',rating:'',bio:'逆卷家的三胞胎之一。',photo:'',source:'资料库'},
+ {id:'s76',game:'DIABOLIK LOVERS',name:'逆卷修',cv:'鸟海浩辅',birthday:'',height:'',rating:'',bio:'逆卷家的长子。',photo:'',source:'资料库'},
+ {id:'s77',game:'十三支演义',name:'刘备',cv:'石田彰',birthday:'',height:'',rating:'',bio:'三国题材故事中的重要角色。',photo:'',source:'资料库'},
+ {id:'s78',game:'十三支演义',name:'曹操',cv:'鸟海浩辅',birthday:'',height:'',rating:'',bio:'三国题材故事中的重要角色。',photo:'',source:'资料库'},
+ {id:'s79',game:'十三支演义',name:'张飞',cv:'冈本信彦',birthday:'',height:'',rating:'',bio:'三国题材故事中的重要角色。',photo:'',source:'资料库'},
+ {id:'s80',game:'十三支演义',name:'赵云',cv:'铃村健一',birthday:'',height:'',rating:'',bio:'三国题材故事中的重要角色。',photo:'',source:'资料库'},
+ {id:'s81',game:'Piofiore',name:'但丁·法尔宗',cv:'石川界人',birthday:'',height:'',rating:'',bio:'法尔宗家族首领。',photo:'',source:'资料库'},
+ {id:'s82',game:'Piofiore',name:'吉尔伯特·雷德福',cv:'森久保祥太郎',birthday:'',height:'',rating:'',bio:'Visconti 家族首领。',photo:'',source:'资料库'},
+ {id:'s83',game:'Piofiore',name:'杨',cv:'冈本信彦',birthday:'',height:'',rating:'',bio:'华人组织首领。',photo:'',source:'资料库'},
+ {id:'s84',game:'BUSTAFELLOWS',name:'林博',cv:'近藤唯',birthday:'',height:'',rating:'',bio:'故事中的主要角色。',photo:'',source:'资料库'},
+ {id:'s85',game:'BUSTAFELLOWS',name:'莫兹',cv:'福山润',birthday:'',height:'',rating:'',bio:'故事中的主要角色。',photo:'',source:'资料库'},
+ {id:'s86',game:'BUSTAFELLOWS',name:'斯卡雷特',cv:'细谷佳正',birthday:'',height:'',rating:'',bio:'故事中的主要角色。',photo:'',source:'资料库'},
+ {id:'s87',game:'even if TEMPEST',name:'卢修斯',cv:'',birthday:'',height:'',rating:'',bio:'奇幻悬疑故事中的攻略角色。',photo:'',source:'资料库'},
+ {id:'s88',game:'even if TEMPEST',name:'泽恩',cv:'',birthday:'',height:'',rating:'',bio:'奇幻悬疑故事中的攻略角色。',photo:'',source:'资料库'},
+ {id:'s89',game:'Birushana',name:'源赖朝',cv:'古川慎',birthday:'',height:'',rating:'',bio:'源平合战题材故事角色。',photo:'',source:'资料库'},
+ {id:'s90',game:'Birushana',name:'平知盛',cv:'福山润',birthday:'',height:'',rating:'',bio:'源平合战题材故事角色。',photo:'',source:'资料库'},
+ {id:'s91',game:'Birushana',name:'武藏坊弁庆',cv:'梅原裕一郎',birthday:'',height:'',rating:'',bio:'源平合战题材故事角色。',photo:'',source:'资料库'},
+ {id:'s92',game:'Nightshade',name:'服部半藏',cv:'津田健次郎',birthday:'',height:'',rating:'',bio:'忍者题材故事角色。',photo:'',source:'资料库'},
+ {id:'s93',game:'Nightshade',name:'藤林弦夜',cv:'佐和真中',birthday:'',height:'',rating:'',bio:'忍者题材故事角色。',photo:'',source:'资料库'},
+ {id:'s94',game:'Nightshade',name:'百地蝶治郎',cv:'酒井广大',birthday:'',height:'',rating:'',bio:'忍者题材故事角色。',photo:'',source:'资料库'},
+ {id:'s95',game:'7\'scarlet',name:'櫛名田恭介',cv:'三木真一郎',birthday:'',height:'',rating:'',bio:'夏日小镇悬疑故事角色。',photo:'',source:'资料库'},
+ {id:'s96',game:'Steam Prison',name:'英格尔斯',cv:'白井悠介',birthday:'',height:'',rating:'',bio:'蒸汽朋克世界观中的攻略角色。',photo:'',source:'资料库'},
+ {id:'s97',game:'Cafe Enchante',name:'伊格尼斯·卡拉',cv:'小野友树',birthday:'',height:'',rating:'',bio:'咖啡馆中的异世界来客。',photo:'',source:'资料库'},
+ {id:'s98',game:'Cafe Enchante',name:'米谢尔',cv:'赤羽根健治',birthday:'',height:'',rating:'',bio:'咖啡馆中的异世界来客。',photo:'',source:'资料库'},
+ {id:'s99',game:'Dairoku',name:'白月',cv:'佐藤拓也',birthday:'',height:'',rating:'',bio:'妖怪与异界题材故事角色。',photo:'',source:'资料库'},
+ {id:'s100',game:'Lover Pretend',name:'春日井翔',cv:'古川慎',birthday:'',height:'',rating:'',bio:'娱乐圈题材恋爱故事角色。',photo:'',source:'资料库'},
+ {id:'s101',game:'Winter\'s Wish',name:'冬绥',cv:'',birthday:'',height:'',rating:'',bio:'明治时代奇幻故事角色。',photo:'',source:'资料库'},
+ {id:'s102',game:'Mistonia\'s Hope',name:'阿尔弗雷德',cv:'',birthday:'',height:'',rating:'',bio:'复仇与幻想题材故事角色。',photo:'',source:'资料库'}
+];
+let saved=JSON.parse(localStorage.getItem('otome_saved_v1')||'[]');let catalog=[...seed,...saved.filter(x=>!seed.some(s=>s.id===x.id))];let selected=null,photoData='';let filter='全部';
+const $=id=>document.getElementById(id);const safe=v=>String(v||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function persist(){localStorage.setItem('otome_saved_v1',JSON.stringify(saved));}
+function render(){let q=$('search').value.trim().toLowerCase();let list=catalog.filter(x=>{let ok=!q||[x.name,x.game,x.cv].join(' ').toLowerCase().includes(q);if(filter==='收藏')return ok&&saved.some(s=>s.id===x.id);if(filter!=='全部')return ok&&x.game===filter;return ok;});$('count').textContent=`找到 ${list.length} 条`; $('results').innerHTML=list.length?list.map(x=>`<article class="char" data-id="${safe(x.id)}"><div class="portrait">${x.photo?`<img src="${x.photo}" alt="${safe(x.name)}">`:`<span class="placeholder">${safe((x.name||'乙女').slice(0,2))}</span>`}<span class="tag">${safe(x.game)}</span></div><div class="charinfo"><div class="charname">${safe(x.name)}</div><div class="game">${safe(x.cv||'CV 待补充')}</div><div class="addhint">点击载入资料 →</div></div></article>`).join(''):'<div class="empty">没有找到匹配角色。<br>可以点击「新建」手动添加 ♡</div>';
+document.querySelectorAll('.char').forEach(el=>el.addEventListener('click',()=>load(el.dataset.id)));renderSaved();}
+function renderSaved(){ $('savedCount').textContent=saved.length;$('savedList').innerHTML=saved.length?saved.map(x=>`<div class="saved"><div class="thumb">${x.photo?`<img src="${x.photo}" alt="">`:safe((x.name||'乙').slice(0,1))}</div><div class="savedmeta"><b>${safe(x.name)}</b><small>${safe(x.game)}</small></div><button class="ghost" data-edit="${safe(x.id)}">编辑</button><button class="danger" data-del="${safe(x.id)}">删除</button></div>`).join(''):'<div class="empty">还没有收藏角色<br>从左侧搜索并添加吧 ♡</div>';
+document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>load(b.dataset.edit));document.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{saved=saved.filter(x=>x.id!==b.dataset.del);persist();catalog=[...seed,...saved.filter(x=>!seed.some(s=>s.id===x.id))];render();});}
+function load(id){let x=catalog.find(a=>a.id===id);if(!x)return;selected=x.id;photoData=x.photo||'';['game','name','cv','birthday','height','rating','bio'].forEach(k=>$(k).value=x[k]||'');preview();$('formMsg').textContent='已载入角色资料，可修改后保存。';$('favBtn').textContent=saved.some(s=>s.id===x.id)?'♥ 已收藏':'♡ 收藏';}
+function preview(){ $('photoPreview').innerHTML=photoData?`<img src="${photoData}" alt="照片预览">`:'<span>PHOTO / 照片预览</span>'; }
+function resetForm(){selected=null;photoData='';['game','name','cv','birthday','height','rating','bio'].forEach(k=>$(k).value='');preview();$('formMsg').textContent='新建一张角色资料卡。';$('favBtn').textContent='♡ 收藏';}
+function collect(){return {id:selected||'u'+Date.now(),game:$('game').value.trim(),name:$('name').value.trim(),cv:$('cv').value.trim(),birthday:$('birthday').value.trim(),height:$('height').value.trim(),rating:$('rating').value,bio:$('bio').value.trim(),photo:photoData,source:'自建'};}
+function save(){let x=collect();if(!x.name){$('formMsg').textContent='请先填写男主姓名。';return;}let i=saved.findIndex(s=>s.id===x.id);if(i>=0)saved[i]=x;else saved.unshift(x);persist();catalog=[...seed.map(s=>saved.find(v=>v.id===s.id)||s),...saved.filter(v=>!seed.some(s=>s.id===v.id))];selected=x.id;$('formMsg').textContent='已保存到本机图鉴。';$('favBtn').textContent='♥ 已收藏';render();}
+$('searchBtn').onclick=render;$('search').addEventListener('input',render);document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));render();});$('newBtn').onclick=resetForm;$('saveBtn').onclick=save;
+$('imageSearchBtn').onclick=()=>{let n=$('name').value.trim(),g=$('game').value.trim();if(!n){$('formMsg').textContent='先选择或填写男主姓名，再打开图片搜索。';return;}let q=encodeURIComponent((g+' '+n+' 官方 角色立绘').trim());window.open('https://www.google.com/search?tbm=isch&q='+q,'_blank','noopener');$('formMsg').textContent='已打开图片搜索页；找到可用图片后保存到设备，再点「选择图片」上传。';};
+$('photoFile').onchange=e=>{let f=e.target.files[0];if(!f)return;if(f.size>5*1024*1024){$('formMsg').textContent='图片请控制在 5MB 以内。';return;}let r=new FileReader();r.onload=()=>{photoData=r.result;preview();$('formMsg').textContent='照片已载入，保存后会保存在本机浏览器。';};r.readAsDataURL(f);};
+$('favBtn').onclick=()=>{let x=collect();if(!x.name){$('formMsg').textContent='请先选择角色或填写男主姓名。';return;}if(saved.some(s=>s.id===x.id)){saved=saved.filter(s=>s.id!==x.id);$('favBtn').textContent='♡ 收藏';}else{saved.unshift(x);$('favBtn').textContent='♥ 已收藏';}persist();catalog=[...seed.map(s=>saved.find(v=>v.id===s.id)||s),...saved.filter(v=>!seed.some(s=>s.id===v.id))];render();};
+$('exportBtn').onclick=()=>{if(!saved.length){$('formMsg').textContent='还没有可导出的角色，请先保存资料。';return;}let cols=['男主照片','游戏名称','男主姓名','CV声优','个人评分','生日','身高','角色简介'];let rows=saved.map(x=>[x.photo?'已上传照片':'',x.game,x.name,x.cv,x.rating,x.birthday,x.height,x.bio]);let csv='\ufeff'+[cols,...rows].map(r=>r.map(v=>'"'+String(v||'').replace(/"/g,'""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='我的乙女男主图鉴.csv';a.click();URL.revokeObjectURL(a.href);};
+render();
+</script></body></html>
